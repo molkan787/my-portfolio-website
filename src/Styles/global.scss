@@ -1,0 +1,67 @@
+$colorAccent: #0078FF;
+
+@font-face {
+    font-family: "CircularStd";
+    src: url("/res/CircularStd-Book.woff2") format("woff2");
+}
+@font-face {
+    font-family: "CircularStd Bold";
+    src: url("/res/CircularStd-Black.woff2") format("woff2");
+}
+html, body{
+    font-family: "CircularStd";
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+*:not(i){
+    font-family: "CircularStd";
+}
+body{
+    // background-image: url('/res/rbg.png');
+    background-image: url('/res/bg.jpg');
+}
+a{
+    color: $colorAccent;
+}
+.corp{
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px;
+}
+.nav{
+    height: 80px;
+}
+.nav a{
+    @extend .btn, .txt;
+    margin-right: 50px;
+    text-decoration: none;
+    float: left;
+    &:first-child{
+        float: right;
+        margin-right: 0;
+    }
+    &[aria-current]{
+        border-bottom: 2px solid;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
+
+a{
+    text-decoration: none;
+}
+
+.separationTitle{
+    text-align: center;
+    margin-top: 220px;
+    margin-bottom: -100px;
+    padding-bottom: 40px;
+    border-bottom: 4px solid #eee;
+}
+
+.sht{
+    font-size: 16px;
+    font-style: italic;
+}
