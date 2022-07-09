@@ -1,4 +1,4 @@
-$colorAccent: #0078FF;
+@import "./_vars.scss";
 
 .btn {
     cursor: pointer;
@@ -44,7 +44,7 @@ h1 {
 }
 
 p {
-    color: #A9B0B4;
+    color: #65696c;
 }
 
 .color {

@@ -13,14 +13,14 @@
 <div class="corp">
 	<Router {url}>
 		<nav class="nav">
-			<Link to="contact">
-				<i class="fas fa-comment"></i> Contact Me
-			</Link>
 			<Link to="/">
 				<i class="fas fa-home"></i> Home
 			</Link>
 			<Link to="portfolio">
 				<i class="fas fa-th-large"></i> Portfolio
+			</Link>
+			<Link to="contact">
+				<i class="fas fa-comment"></i> Contact Me
 			</Link>
 		</nav>
 		<div>
@@ -36,3 +36,9 @@
 
 	</Router>
 </div>
+
+<style lang="scss" global>
+    @import "../Styles/global.scss";
+	@import "../Styles/mtm.scss";
+	@import "../Styles/icons.scss";
+</style>

@@ -4,7 +4,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import css from 'rollup-plugin-css-only';
-import scss from "rollup-plugin-scss";
+// import scss from "rollup-plugin-scss";
 import sveltePreprocess from 'svelte-preprocess';
 
 const production = !process.env.ROLLUP_WATCH;
@@ -39,16 +39,23 @@ export default {
 		file: 'public/build/bundle.js'
 	},
 	plugins: [
-		scss({
-			includePaths: ["./src/Styles", "node_modules"],
-			output: "public/res/global.css"
-	   	}),
+		// scss({
+		// 	includePaths: ["./src/Styles", "node_modules"],
+		// 	output: "public/res/global.css"
+	   	// }),
 		svelte({
 			preprocess: sveltePreprocess(),
 			compilerOptions: {
 				// enable run-time checks when not in production
 				dev: !production
-			}
+			},
+			onwarn: (warning, handler) => {
+				const { code, frame } = warning;
+				if (code === "css-unused-selector" || code === 'a11y-label-has-associated-control')
+					return;
+		
+				handler(warning);
+			},
 		}),
 		// we'll extract any component CSS out into
 		// a separate file - better for performance

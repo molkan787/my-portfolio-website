@@ -1,6 +1,6 @@
 <div>
     I <i class="fas fa-heart"></i> <br>
-    <span>JS</span>
+    <span>TS</span>
 </div>
 
 <style>

@@ -48,11 +48,11 @@ let success = false
 <div class="root">
     <h1>Contact</h1>
     <form method="POST" class:transparent={success}>
-        <label>Your name</label> <br>
+        <label for="name">Your name</label> <br>
         <input bind:value={form.fullname} disabled={loading || success} class="input autoCap" type="text" name="name" placeholder="John Smith">
-        <label>Your email address</label> <br>
+        <label for="email">Your email address</label> <br>
         <input bind:value={form.email} disabled={loading || success} class="input" type="text" name="email" placeholder="Name@domain.com">
-        <label>Message</label> <br>
+        <label for="message">Message</label> <br>
         <textarea bind:value={form.message} disabled={loading || success} class="input" name="message" cols="30" rows="10" placeholder="Your message"></textarea>
         <button on:click={submit} class="outlined btn" disabled={loading || success}>
             {#if loading}
@@ -71,7 +71,7 @@ let success = false
     {/if}
 </div>
 
-<style>
+<style lang="scss">
 div.root{
     text-align: center;
     padding-bottom: 100px;
@@ -85,6 +85,10 @@ form{
     margin: auto;
     text-align: left;
     transition: opacity 0.3;
+    @media (max-width: 600px){
+        width: 100%;
+        margin: none;
+    }
 }
 form.transparent{
     opacity: 0.2;

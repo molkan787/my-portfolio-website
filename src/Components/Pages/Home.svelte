@@ -37,20 +37,34 @@ const projects = static_data.homeProjects
 </div>
 
 <style type="text/scss">
-div.root{
-    margin-top: 60px;
+@media (min-width: 480px){
+    div.root{
+        margin-top: 60px;
+    }
 }
 .skills{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 520px;
+    margin: auto;
     margin-top: 40px;
 }
 .skill-item{
     height: 34px;
-    margin: 0 22px;
+    margin: 1.5rem;
+    // margin: 0 22px;
+    // @media (max-width: 740px){
+    //     margin: 16px 22px;
+    // }
 }
 .before-footer{
     text-align: center;
-    margin-bottom: 160px;
-    margin-top: -80px;
+    margin-bottom: 60px;
+    margin-top: 60px;
 }
 .before-footer-btn{
     font-size: 22px;

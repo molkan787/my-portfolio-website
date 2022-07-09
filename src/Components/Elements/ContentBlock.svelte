@@ -21,4 +21,26 @@ h1{
 p{
     font-size: 20px;
 }
+@media (max-width: 900px){
+    div.root{
+        margin-top: 80px;
+    }
+    h1{
+        font-size: 26px;
+    }
+    p{
+        font-size: 16px;
+    }
+}
+@media (max-width: 700px){
+    div.root{
+        margin-top: 40px;
+    }
+    h1{
+        font-size: 22px;
+    }
+    p{
+        font-size: 14px;
+    }
+}
 </style>
